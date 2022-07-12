@@ -139,7 +139,7 @@ public class ManageStudentFormController {
                     new Alert(Alert.AlertType.ERROR, "There is no such customer associated with the id " + id).show();
                 }
                 Connection connection = DBConnection.getInstance().getConnection();
-                PreparedStatement pstm = connection.prepareStatement("UPDATE Student SET student_name=?, address=?,contact=?,email=?,nic=? WHERE id=?");
+                PreparedStatement pstm = connection.prepareStatement("UPDATE Student SET student_name=?, address=?,contact=?,email=?,nic=? WHERE student_id=?");
                 pstm.setString(1, name);
                 pstm.setString(2, address);
                 pstm.setString(3, contact);

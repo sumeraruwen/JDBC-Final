@@ -17,8 +17,8 @@
       </JFXTextField>
       <JFXTextField fx:id="txtStudentName" labelFloat="true" layoutX="23.0" layoutY="140.0" prefHeight="31.0" prefWidth="567.0" promptText="Student Name :" />
       <JFXTextField fx:id="txtEmail" labelFloat="true" layoutX="23.0" layoutY="192.0" prefHeight="31.0" prefWidth="567.0" promptText="Email :" />
-      <JFXButton id="btnSave" fx:id="btnSave" layoutX="678.0" layoutY="300.0" onAction="#btnSave_OnAction" prefHeight="35.0" prefWidth="84.0" style="-fx-cursor: hand;" text="Save" />
-      <JFXButton id="btnDelete" fx:id="btnDelete" layoutX="793.0" layoutY="302.0" onAction="#btnDelete_OnAction" prefHeight="35.0" prefWidth="84.0" style="-fx-cursor: hand;" text="Delete" />
+      <JFXButton id="btnSave" fx:id="btnSave" layoutX="678.0" layoutY="300.0" onAction="#btnSave_OnAction" prefHeight="35.0" prefWidth="84.0" style="-fx-cursor: hand; -fx-background-color: blue;" text="Save" textFill="WHITE" />
+      <JFXButton id="btnDelete" fx:id="btnDelete" layoutX="793.0" layoutY="302.0" onAction="#btnDelete_OnAction" prefHeight="35.0" prefWidth="84.0" style="-fx-cursor: hand; -fx-background-color: blue;" text="Delete" textFill="WHITE" />
       <TableView fx:id="tblStudents" layoutX="39.0" layoutY="467.0" prefHeight="285.0" prefWidth="1022.0">
          <columns>
             <TableColumn prefWidth="126.0" text="Student ID" />
