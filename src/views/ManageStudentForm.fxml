@@ -33,5 +33,6 @@
       <JFXTextField fx:id="txtContact" labelFloat="true" layoutX="23.0" layoutY="245.0" prefHeight="31.0" prefWidth="567.0" promptText="Contact :" />
       <JFXTextField fx:id="txtAddress" labelFloat="true" layoutX="23.0" layoutY="304.0" prefHeight="31.0" prefWidth="567.0" promptText="Address ;" />
       <JFXTextField fx:id="txtNic" labelFloat="true" layoutX="23.0" layoutY="373.0" prefHeight="31.0" prefWidth="567.0" promptText="NIC :" />
+      <JFXButton id="btnSave" fx:id="btnUpdate" layoutX="734.0" layoutY="243.0" onAction="#btnUpdate_OnAction" prefHeight="35.0" prefWidth="84.0" style="-fx-cursor: hand;" text="Update" />
    </children>
 </AnchorPane>
