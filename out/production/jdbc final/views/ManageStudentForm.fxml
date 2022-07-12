@@ -1,14 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="controller.ManageStudentFormController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="807.0" prefWidth="1127.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManageStudentFormController">
+   <children>
+      <JFXButton id="btnAddNewCustomer" fx:id="btnAddNewStudent" layoutX="911.0" layoutY="25.0" onAction="#btnAddNew_OnAction" prefHeight="35.0" prefWidth="188.0" style="-fx-cursor: hand;" text="+ New Student" />
+      <JFXTextField fx:id="txtStudentId" labelFloat="true" layoutX="27.0" layoutY="88.0" prefHeight="29.0" prefWidth="559.0" promptText="Student ID :">
+         <font>
+            <Font name="Ubuntu" size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtStudentName" labelFloat="true" layoutX="23.0" layoutY="140.0" prefHeight="31.0" prefWidth="567.0" promptText="Student Name :" />
+      <JFXTextField fx:id="txtEmail" labelFloat="true" layoutX="23.0" layoutY="192.0" prefHeight="31.0" prefWidth="567.0" promptText="Email :" />
+      <JFXButton id="btnSave" fx:id="btnSave" layoutX="671.0" layoutY="138.0" onAction="#btnSave_OnAction" prefHeight="35.0" prefWidth="84.0" style="-fx-cursor: hand;" text="Save" />
+      <JFXButton id="btnDelete" fx:id="btnDelete" layoutX="808.0" layoutY="125.0" onAction="#btnDelete_OnAction" prefHeight="35.0" prefWidth="84.0" style="-fx-cursor: hand;" text="Delete" />
+      <TableView fx:id="tblStudents" layoutX="39.0" layoutY="467.0" prefHeight="285.0" prefWidth="1022.0">
+         <columns>
+            <TableColumn prefWidth="126.0" text="Student ID" />
+            <TableColumn prefWidth="168.0" text="Student Name" />
+            <TableColumn prefWidth="182.0" text="Email" />
+            <TableColumn prefWidth="182.0" text="Contact" />
+            <TableColumn prefWidth="182.0" text="Address" />
+            <TableColumn prefWidth="182.0" text="Nic" />
+         </columns>
+      </TableView>
+      <JFXTextField fx:id="txtContact" labelFloat="true" layoutX="23.0" layoutY="245.0" prefHeight="31.0" prefWidth="567.0" promptText="Contact :" />
+      <JFXTextField fx:id="txtAddress" labelFloat="true" layoutX="23.0" layoutY="304.0" prefHeight="31.0" prefWidth="567.0" promptText="Address ;" />
+      <JFXTextField fx:id="txtNic" labelFloat="true" layoutX="23.0" layoutY="373.0" prefHeight="31.0" prefWidth="567.0" promptText="NIC :" />
+   </children>
 </AnchorPane>
