@@ -10,7 +10,6 @@
 
 <AnchorPane prefHeight="807.0" prefWidth="1127.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManageStudentFormController">
    <children>
-      <JFXButton id="btnAddNewCustomer" fx:id="btnAddNewStudent" layoutX="911.0" layoutY="25.0" onAction="#btnAddNew_OnAction" prefHeight="35.0" prefWidth="188.0" style="-fx-cursor: hand;" text="+ New Student" />
       <JFXTextField fx:id="txtStudentId" labelFloat="true" layoutX="27.0" layoutY="88.0" prefHeight="29.0" prefWidth="559.0" promptText="Student ID :">
          <font>
             <Font name="Ubuntu" size="13.0" />
@@ -18,8 +17,8 @@
       </JFXTextField>
       <JFXTextField fx:id="txtStudentName" labelFloat="true" layoutX="23.0" layoutY="140.0" prefHeight="31.0" prefWidth="567.0" promptText="Student Name :" />
       <JFXTextField fx:id="txtEmail" labelFloat="true" layoutX="23.0" layoutY="192.0" prefHeight="31.0" prefWidth="567.0" promptText="Email :" />
-      <JFXButton id="btnSave" fx:id="btnSave" layoutX="671.0" layoutY="138.0" onAction="#btnSave_OnAction" prefHeight="35.0" prefWidth="84.0" style="-fx-cursor: hand;" text="Save" />
-      <JFXButton id="btnDelete" fx:id="btnDelete" layoutX="808.0" layoutY="125.0" onAction="#btnDelete_OnAction" prefHeight="35.0" prefWidth="84.0" style="-fx-cursor: hand;" text="Delete" />
+      <JFXButton id="btnSave" fx:id="btnSave" layoutX="678.0" layoutY="300.0" onAction="#btnSave_OnAction" prefHeight="35.0" prefWidth="84.0" style="-fx-cursor: hand;" text="Save" />
+      <JFXButton id="btnDelete" fx:id="btnDelete" layoutX="793.0" layoutY="302.0" onAction="#btnDelete_OnAction" prefHeight="35.0" prefWidth="84.0" style="-fx-cursor: hand;" text="Delete" />
       <TableView fx:id="tblStudents" layoutX="39.0" layoutY="467.0" prefHeight="285.0" prefWidth="1022.0">
          <columns>
             <TableColumn prefWidth="126.0" text="Student ID" />
@@ -33,6 +32,5 @@
       <JFXTextField fx:id="txtContact" labelFloat="true" layoutX="23.0" layoutY="245.0" prefHeight="31.0" prefWidth="567.0" promptText="Contact :" />
       <JFXTextField fx:id="txtAddress" labelFloat="true" layoutX="23.0" layoutY="304.0" prefHeight="31.0" prefWidth="567.0" promptText="Address ;" />
       <JFXTextField fx:id="txtNic" labelFloat="true" layoutX="23.0" layoutY="373.0" prefHeight="31.0" prefWidth="567.0" promptText="NIC :" />
-      <JFXButton id="btnSave" fx:id="btnUpdate" layoutX="734.0" layoutY="243.0" onAction="#btnUpdate_OnAction" prefHeight="35.0" prefWidth="84.0" style="-fx-cursor: hand;" text="Update" />
    </children>
 </AnchorPane>

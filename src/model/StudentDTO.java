@@ -1,8 +1,8 @@
 package model;
 
 public class StudentDTO {
-    private String id;
-    private String name;
+    private String student_id;
+    private String student_name;
     private String email;
     private String contact;
     private String address;
@@ -11,29 +11,29 @@ public class StudentDTO {
     public StudentDTO() {
     }
 
-    public StudentDTO(String id, String name, String email, String contact, String address, String nic) {
-        this.id = id;
-        this.name = name;
+    public StudentDTO(String student_id, String student_name, String email, String contact, String address, String nic) {
+        this.student_id = student_id;
+        this.student_name = student_name;
         this.email = email;
         this.contact = contact;
         this.address = address;
         this.nic = nic;
     }
 
-    public String getId() {
-        return id;
+    public String getStudent_id() {
+        return student_id;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setStudent_id(String student_id) {
+        this.student_id = student_id;
     }
 
-    public String getName() {
-        return name;
+    public String getStudent_name() {
+        return student_name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setStudent_name(String student_name) {
+        this.student_name = student_name;
     }
 
     public String getEmail() {
@@ -71,8 +71,8 @@ public class StudentDTO {
     @Override
     public String toString() {
         return "StudentDTO{" +
-                "id='" + id + '\'' +
-                ", name='" + name + '\'' +
+                "student_id='" + student_id + '\'' +
+                ", student_name='" + student_name + '\'' +
                 ", email='" + email + '\'' +
                 ", contact='" + contact + '\'' +
                 ", address='" + address + '\'' +
