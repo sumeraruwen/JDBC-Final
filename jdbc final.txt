@@ -1,0 +1,165 @@
+DROP DATABASE IF EXISTS ijse;
+CREATE DATABASE ijse;
+use ijse;
+
+create table Student(
+	student_id VARCHAR(6),
+	student_name VARCHAR(30),
+	email TEXT,
+	contact VARCHAR(20),
+	address TEXT,
+	nic VARCHAR(45), 
+	CONSTRAINT PRIMARY KEY (student_id)
+);
+
+create table Teacher(
+	teacher_id VARCHAR(6),
+	name VARCHAR(30),
+	nic VARCHAR(45),
+	contact VARCHAR(20),
+	address TEXT,
+	CONSTRAINT PRIMARY KEY (teacher_id)
+);
+
+create table Subject(
+	subject_id VARCHAR(6),
+	subject_name VARCHAR(30),
+	credit double,
+	teacher_id VARCHAR(6),
+	CONSTRAINT PRIMARY KEY (subject_id),
+	CONSTRAINT FOREIGN KEY(teacher_id) REFERENCES Teacher(teacher_id) on Delete Cascade on Update Cascade
+);
+
+create table Course(
+	course_id VARCHAR(6),
+	course_name VARCHAR(30),
+	cost double,
+	duration VARCHAR(45),
+        subject_id VARCHAR(6),
+	CONSTRAINT PRIMARY KEY (course_id),
+	CONSTRAINT FOREIGN KEY(subject_id) REFERENCES Subject(subject_id) on Delete Cascade on Update Cascade
+);
+
+create table Intake(
+	intake_id VARCHAR(6),
+	start_date DATE,
+	intakecol VARCHAR(45),
+	description VARCHAR(45),
+	course_id VARCHAR(6),
+	CONSTRAINT PRIMARY KEY (intake_id),
+	CONSTRAINT FOREIGN KEY(course_id) REFERENCES Course(course_id) on Delete Cascade on Update Cascade
+);
+
+
+
+create table Registration(
+	registration_id VARCHAR(6),
+	reg_date DATE,
+	student_id VARCHAR(6),
+	intake_id VARCHAR(6),
+	CONSTRAINT PRIMARY KEY (registration_id),
+	CONSTRAINT FOREIGN KEY(student_id) REFERENCES Student(student_id) on Delete Cascade on Update Cascade,
+	CONSTRAINT FOREIGN KEY(intake_id) REFERENCES Intake(intake_id) on Delete Cascade on Update Cascade
+);
+
+
+create table Payment(
+	payment_id VARCHAR(6),
+	date DATE,
+	cost double,
+	registration_id VARCHAR(6),
+	CONSTRAINT PRIMARY KEY (payment_id),
+	CONSTRAINT FOREIGN KEY(registration_id) REFERENCES Registration(registration_id) on Delete Cascade on Update Cascade
+	
+);
+
+INSERT INTO Student VALUES("S001","SUMERA","suru@gmail.com","076","galle","2000");
+INSERT INTO Student VALUES("S002","ruwen","suru@gmail.com","078","colombo","2005");
+INSERT INTO Student VALUES("S003","venura","suru@gmail.com","071","panadura","2004");
+INSERT INTO Student VALUES("S004","pawan","suru@gmail.com","077","galle","2080");
+INSERT INTO Student VALUES("S005","suru","suru@gmail.com","075","kaluthara","2070");
+
+INSERT INTO Teacher VALUES("T001","SUMERA","1996","077","COLOMBO");
+INSERT INTO Teacher VALUES("T002","RUWEN","1996","077","panadura");
+INSERT INTO Teacher VALUES("T003","KAMAL","1996","077","Galle");
+INSERT INTO Teacher VALUES("T004","RUWEN","1996","077","panadura");
+INSERT INTO Teacher VALUES("T005","KAMAL","1996","077","Galle");
+
+
+INSERT INTO Subject VALUES("sb001","java","100","T002");
+INSERT INTO Subject VALUES("sb002","dbms","100","T003");
+INSERT INTO Subject VALUES("sb003","oop","100","T004");
+INSERT INTO Subject VALUES("sb004","se","100","T001");
+INSERT INTO Subject VALUES("sb005","It","100","T005");
+
+
+INSERT INTO Course VALUES("c001","Gdse","80000","2 yaers","sb001");
+INSERT INTO Course VALUES("c002","abcd","80000","2 yaers","sb002");
+INSERT INTO Course VALUES("c003","cdef","90000","2 yaers","sb003");
+INSERT INTO Course VALUES("c004","cmjd","100000","2 yaers","sb004");
+INSERT INTO Course VALUES("c005","se","40000","2 yaers","sb005");
+
+
+
+INSERT INTO Intake VALUES("i001","2022/07/5","ddfg","dfgdfg","c001");
+INSERT INTO Intake VALUES("i002","2022/07/5","ddfg","dfgdfg","c002");
+INSERT INTO Intake VALUES("i003","2022/07/5","ddfg","dfgdfg","c003");
+INSERT INTO Intake VALUES("i004","2022/07/5","ddfg","dfgdfg","c004");
+INSERT INTO Intake VALUES("i005","2022/07/5","ddfg","dfgdfg","c005");
+
+
+
+
+INSERT INTO Registration VALUES("r001","2022/07/5","s001","i001");
+INSERT INTO Registration VALUES("r002","2022/07/5","s001","i002");
+INSERT INTO Registration VALUES("r003","2022/07/5","s001","i003");
+INSERT INTO Registration VALUES("r004","2022/07/5","s001","i004");
+INSERT INTO Registration VALUES("r005","2022/07/5","s001","i005");
+
+
+INSERT INTO Payment VALUES("p001","2022/07/5","1000","r001");
+INSERT INTO Payment VALUES("p002","2022/07/5","1000","r002");
+INSERT INTO Payment VALUES("p003","2022/07/5","1000","r003");
+INSERT INTO Payment VALUES("p004","2022/07/5","1000","r004");
+INSERT INTO Payment VALUES("p005","2022/07/5","1000","r005");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

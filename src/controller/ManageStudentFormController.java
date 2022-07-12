@@ -56,16 +56,15 @@ public class ManageStudentFormController {
         }
 
         tblStudents.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
-            btnDelete.setDisable(newValue == null);
+           // btnDelete.setDisable(newValue == null);
             btnSave.setText(newValue != null ? "Update" : "Save");
-            btnSave.setDisable(newValue == null);
+           // btnSave.setDisable(newValue == null);
 
             if (newValue != null) {
                 txtStudentId.setText(newValue.getStudent_id());
                 txtStudentName.setText(newValue.getStudent_name());
                 txtEmail.setText(newValue.getEmail());
                 txtContact.setText(newValue.getContact());
-                txtStudentName.setText(newValue.getStudent_name());
                 txtAddress.setText(newValue.getAddress());
                 txtNic.setText(newValue.getNic());
 
